@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>getElementsByTagName() 활용</title>
+    <script>
+        function highlightFruit() {
+            // 문서 안의 모든 <span> 태그를 찾아 배열 형태(컬렉션)로 가져옴 [8, 9]
+            let spanArray = document.getElementsByTagName("span");
+            
+            // 반복문을 돌아가며 모든 <span> 태그의 스타일을 변경 [9]
+            for (let i = 0; i < spanArray.length; i++) {
+                let span = spanArray[i];
+                span.style.color = "orchid";
+                span.style.fontSize = "20px";
+                span.style.fontWeight = "bold";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>내가 좋아하는 과일 
+        <button onclick="highlightFruit()">과일 강조하기</button>
+    </h3>
+    <hr>
+    <p>
+        저는 빨간 <span>사과</span>를 좋아해서 아침마다 먹어요.
+        운동할 때는 <span>바나나</span>를 먹지요. 
+        또한 달콤한 <span>체리</span>와 <span>자두</span>를 좋아합니다.
+    </p>
+</body>
+</html>

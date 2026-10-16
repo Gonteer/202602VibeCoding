@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>주간 기온 배열과 평균 구하기</h3>
+    <hr>
+    <script>
+        // 1. Array 객체/배열 생성 (월~금 기온 데이터)
+        let degrees = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4];
+
+        let sum = 0;
+
+        // 2. degrees.length(배열 원소 개수)만큼 반복하며 합계 계산
+        for (let i = 0; i < degrees.length; i++) {
+            document.write((i + 1) + "일차 기온: " + degrees[i] + "도<br>");
+            sum += degrees[i]; //sum = sum + degrees[i]
+        }
+
+        document.write("<hr>");
+        // 3. 평균값 계산 (소수점 정리)
+        let avg = sum / degrees.length;
+        document.write("<b>이번 주 평균 기온: " + avg.toFixed(2) + "도</b>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>사용자 입력과 변수</title>
+</head>
+<body>
+    <h3>사용자 맞춤 인사말</h3>
+    <hr>
+    <script>
+        // 1. prompt()로 이름을 입력받아 userName이라는 변수에 저장합니다.
+        let userName = prompt("당신의 이름을 입력하세요:", "김동의");
+
+        // 2. 입력받은 이름이 존재할 경우 환영 메시지를 만듭니다.
+        if (userName != null) {
+            // 알림창으로 인사
+            alert(userName + "님, 만나서 반갑습니다!");
+            
+            // document.write()를 통해 HTML 화면에 직접 글자를 출력합니다.
+            document.write("<p><b>" + userName + "</b>님의 방문을 환영합니다!</p>");
+        }
+    </script>
+</body>
+</html>

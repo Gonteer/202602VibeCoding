@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>문서의 동적 구성</title>
+    <script>
+        function createDIV() {
+            let parent = document.getElementById("parent");
+            
+            // 1. 새로운 <div> DOM 객체 생성 [10, 11]
+            let newDIV = document.createElement("div");
+            newDIV.innerHTML = "새로 생성된 DIV입니다. (클릭하면 삭제됩니다)";
+            newDIV.style.backgroundColor = "yellow";
+            newDIV.style.padding = "10px";
+            newDIV.style.marginTop = "5px";
+            
+            // 2. 생성된 DIV를 클릭하면 부모로부터 자신을 삭제하는 이벤트 등록
+            newDIV.onclick = function() {
+                let p = this.parentElement; // 부모 태그 요소 찾기 
+                p.removeChild(this);        // 부모로부터 자신 삭제
+            };
+            
+            // 3. 부모 DOM 객체의 자식으로 newDIV 추가 [10, 11]
+            parent.appendChild(newDIV);
+        }
+    </script>
+</head>
+<body id="parent">
+    <h3>DIV 객체를 동적으로 생성, 삽입, 삭제하기</h3>
+    <hr>
+    <p>아래 링크를 누르면 새로운 블록이 추가됩니다.</p>
+    <a href="javascript:createDIV()">[+ DIV 생성하기]</a>
+    <hr>
+</body>
+</html>

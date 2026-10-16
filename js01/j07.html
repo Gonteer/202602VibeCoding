@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>방문 초(Second)시간이 짝수이면 보라색, 홀수이면 하늘색 배경</h3>
+    <hr>
+    <script>
+        // 1. 현재 날짜와 시간 정보를 가진 Date 객체 생성
+        let now = new Date();
+
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
+
+        // 2. 초(second)가 짝수인지 홀수인지 판별하여 배경색 동적 제어
+        if (second % 2 == 0) {
+            document.body.style.backgroundColor = "violet";
+        } else {
+            document.body.style.backgroundColor = "lightskyblue";
+        }
+
+        // 3. 현재 시각 화면 출력
+        document.write("현재 접속 시각: " + hour + "시 " + minute + "분 " + second + "초");
+    </script>
+</body>
+</html>

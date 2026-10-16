@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS 스타일 동적 변경</title>
+    <script>
+        // `document.getElementById("mySpan")`: HTML에서 `id="mySpan"`으로 지정된 <span> 태그를 찾아옵니다
+        function changeStyle() {
+            // id가 "mySpan"인 HTML DOM 객체를 찾아서 변수에 저장 [3]
+            let span = document.getElementById("mySpan");
+            
+            // DOM 객체의 style 프로퍼티를 이용하여 모양 변경 [4]
+            span.style.color = "green";             // 글자 색상을 초록색으로 변경
+            span.style.fontSize = "30px";           // 글자 크기를 30px로 변경
+            span.style.border = "3px dotted magenta"; // 3px 자홍색 점선 테두리 설정
+            span.style.margin = "20px";             // 여백 설정
+        }
+    </script>
+</head>
+<body>
+    <h3>DOM 객체의 CSS3 스타일 동적 변경</h3>
+    <hr>
+    <p style="color:blue">
+        이것은 <span id="mySpan" style="color:red">문장입니다.</span>
+    </p>
+    <!-- 버튼 클릭 시 changeStyle() 함수 호출 [4] -->
+    <button onclick="changeStyle()">스타일 변경하기</button>
+</body>
+</html>

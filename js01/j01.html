@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>두 수의 합 구하기</h3>
+    <hr>
+    <script>
+        // 1. 사용자로부터 두 개 숫자를 입력받음 (기본값은 문자열 형태)
+        let input1 = prompt("첫 번째 숫자를 입력하세요:", "10");
+        let input2 = prompt("두 번째 숫자를 입력하세요:", "20");
+
+        // 2. 입력받은 문자열을 정수(Integer) 숫자로 변환
+        let num1 = parseInt(input1);
+        let num2  = parseInt(input2);
+
+        // 3. 산술 연산자(+)를 이용해 덧셈 수행
+        let sum = num1 + num2;
+
+        // 4. 연산 결과를 화면에 출력
+        document.write("첫 번째 숫자: " + num1 + "<br>");
+        document.write("두 번째 숫자: " + num2 + "<br>");
+        document.write("<hr>");
+        document.write("<b>두 수의 합: " + sum + "</b>");
+    </script>
+</body>
+</html>

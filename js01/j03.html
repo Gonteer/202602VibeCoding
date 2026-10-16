@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>나이 확인 프로그램</h3>
+    <hr>
+    <script>
+        // 1. 나이 입력받기
+        let ageInput = prompt("나이를 입력하세요:", "20");
+        let age = parseInt(ageInput);
+
+        // 2. 조건에 따라 다른 메시지 출력
+        if (age >= 20) {
+            document.write("<h4 style='color:green;'>성인입니다. 환영합니다!</h4>");
+        } else {
+            document.write("<h4 style='color:red;'>미성년자입니다. 접근이 제한됩니다.</h4>");
+        }
+    </script>
+</body>
+</html>
