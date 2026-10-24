@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>[실습1] BOM 제어 1 | 브라우저 창 열고 닫기</title>
+    <script>
+        let myWin = null;
+
+        // 새 팝업 창 닫기 함수
+        function closeWindow() {
+            if (myWin != null && !myWin.closed) {
+                myWin.close(); // 생성했던 팝업 창 닫기
+            } else {
+                alert("열려 있는 팝업 창이 없습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>[실습1] BOM 제어 1 | 브라우저 창 열고 닫기</h3>
+    <hr>
+
+    <button onclick="window.open('http://www.naver.com', 'myWin', 'width=400,height=300')">
+        작은 네이버 창 열기
+    </button>
+    <br><br>
+
+    <!-- 팝업 창 닫기 및 현재 창 닫기 버튼 -->
+    <button onclick="closeWindow()">열어놓은 팝업 창 닫기</button>
+    <button onclick="window.close()">현재 브라우저 창 닫기</button>
+</body>

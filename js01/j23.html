@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 부모 상자의 모양 정의 */
+        #parentDiv {
+            padding: 30px;
+            background-color: #fff3cd;
+            border: 2px solid #ffebaa;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        /* 버튼 모양 정의 */
+        #myButton {
+            padding: 10px 20px;
+            font-size: 15px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>[실습3] 이벤트 흐름 차단하기 (e.stopPropagation)</h3>
+    <hr>
+
+    <!-- 부모 영역과 자식 버튼 -->
+    <div id="parentDiv">
+        [부모 영역 (DIV)] 상자를 클릭해보세요.<br>
+        <button id="myButton">버튼만 클릭하기</button>
+    </div>
+
+    <script>
+        // DOM 요소 가져오기
+        let parent = document.getElementById('parentDiv');
+        let button = document.getElementById('myButton');
+
+        // 부모 영역(div)의 클릭 이벤트
+        parent.addEventListener('click', function() {
+            alert('부모 영역(DIV) 클릭 이벤트가 실행되었습니다!');
+        });
+
+        // 자식 요소(button)의 클릭 이벤트 및 전파 차단
+        button.addEventListener('click', function(e) {
+            alert('버튼만 클릭되었습니다!');
+            e.stopPropagation(); // 이벤트가 위로 퍼저나가는 것을 완벽히 차단
+        });
+    </script>
+</body>
+</html>
